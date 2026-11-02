@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mana - Sua Casa da Roça</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .marca { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1a3c2a; }
+    .marca-img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; display: block; }
+    .hero-selo { background: none !important; box-shadow: none !important; width: auto; height: auto; }
+    .hero-selo img { width: 340px; height: 340px; border-radius: 50%; object-fit: cover; }
+    .botao.local { background: #1a3c2a; color: white; }
+  </style>
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="#inicio">
+      <img src="mana.jpg" alt="Logo Maná" class="marca-img">
+      <span><strong>MANÁ</strong><small>Sua casa da roça</small></span>
+    </a>
+    <nav>
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="https://maps.app.goo.gl/5pyELnmZp3w3Qbdr8?g_st=aw" target="_blank">📍 Localização</a>
+    </nav>
+    <a class="carrinho-topo" href="#produtos">🛒 Carrinho <span id="contador">0</span></a>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-texto">
+        <span class="etiqueta">TEMPEROS • GRÃOS • MERCEARIA</span>
+        <h1>Mais sabor e carinho em cada receita.</h1>
+        <p>Encontre seus produtos favoritos no Armazém Maná. Escolha, adicione ao carrinho e faça seu pedido pelo WhatsApp!</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="botao principal" href="#produtos">Ver produtos</a>
+          <a class="botao local" href="https://maps.app.goo.gl/5pyELnmZp3w3Qbdr8?g_st=aw" target="_blank">📍 Ver no Maps</a>
+        </div>
+      </div>
+      <div class="hero-selo">
+        <img src="mana.jpg" alt="Armazém Maná">
+      </div>
+    </section>
+
+    <section class="secao produtos-secao" id="produtos">
+      <div class="grade-produtos" id="lista-produtos"></div>
+      <aside class="resumo-carrinho" id="carrinho">
+        <div><span class="etiqueta">SEU PEDIDO</span><h2>🛒 Meu carrinho</h2></div>
+        <ul id="itens-carrinho"><li class="vazio">Seu carrinho está vazio.</li></ul>
+        <div class="rodape-carrinho">
+          <span id="total-itens">0 produtos</span>
+          <button class="botao whatsapp" id="enviar-pedido">Enviar pedido pelo WhatsApp</button>
+        </div>
+      </aside>
+    </section>
+
+    <section class="sobre" id="sobre">
+      <div><span class="etiqueta">ONDE ESTAMOS</span><h2>Venha nos visitar!</h2>
+      <p>Clique abaixo para abrir nossa localização no Google Maps e traçar sua rota até o Armazém Maná.</p>
+      <a class="botao local" href="https://maps.app.goo.gl/5pyELnmZp3w3Qbdr8?g_st=aw" target="_blank" style="display:inline-block; margin-top:10px; padding:12px 20px; border-radius:8px; text-decoration:none;">📍 Abrir no Google Maps</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <div class="links-contato" style="display:flex; flex-direction:column; gap:8px;">
+      <a class="botao whatsapp" href="https://wa.me/556193045720" target="_blank">☏ Fale conosco!</a>
+      <a class="botao local" href="https://maps.app.goo.gl/5pyELnmZp3w3Qbdr8?g_st=aw" target="_blank" style="text-align:center; padding:12px; border-radius:8px; text-decoration:none;">📍 R. 14 Qd. 28 Lt. 08 - Valparaíso de Goiás</a>
+    </div>
+    <small class="direitos">© <span id="ano"></span> Armazém Maná.</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
